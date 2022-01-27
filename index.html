@@ -8,9 +8,10 @@
 </head>
 <body>
     <section>
+        <form action="" method="get">
         <div class="box">
             <p class="Title">
-                Submit your Best Design
+                Submit your <mark>Best</mark> Design
             </p>
         </div>
         <div class="box">
@@ -34,14 +35,23 @@
               </select></div>
               <textarea name="Description" placeholder="Project Short Description"></textarea>
               <div class="container">
-                <div class="field"> <input name="Add Your Best URL" required placeholder="Add Your Best URL" type="url"/></div>
+                <div class="field"> <input name="Add Your Best URL"  placeholder="Add Your Best URL" type="url"/></div>
                 <button class="button"><p>Add URL</p></button>
                 </div>
                 <button class="button"><p>Save and Add More Design</p></button>
         </div>
         <div class="box">
-
+            <div class="insightsbox"> <input name="policy" 
+				required
+				type="checkbox"/>
+				<span>I`d like to receive occasional insights from DesignRush</div>
+                    <p>By submitting this form, i agree to DesignRush <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+                    <p>This site is protected by reCAPTCHA and the Google <a href="#">Privacy Police</a> and <a href="#">Terms of Service</a> apply</p>
+                    <div class="send">
+                        <input name="send" value="SUBMIT &#9658" type="submit">
+                        </div>
         </div>
+    </form>
     </section> 
 </body>
 </html>
