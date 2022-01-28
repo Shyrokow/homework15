@@ -24,16 +24,69 @@ section .box {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
+  width: 365px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 section .field input {
-  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 365px;
+  height: 30px;
+  font-family: sans-serif;
+  font-style: normal;
+  color: darkgrey;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2.5px;
 }
 section .field select {
-  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 365px;
+  height: 30px;
+  font-family: sans-serif;
+  font-style: normal;
+  color: darkgrey;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2.5px;
 }
 section .box textarea {
-  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 365px;
+  height: 30px;
+  font-family: sans-serif;
+  font-style: normal;
+  color: darkgrey;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2.5px;
+  resize: none;
+}
+section .box button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: royalblue;
+  color: white;
+  height: 30px;
+  width: 30%;
+  border: none;
+  border-radius: 1%;
 }
 section .container {
   display: -webkit-box;

@@ -11,19 +11,43 @@ section {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        width: 100%;
+        width: 365px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    @mixin blockstyle {
+        display: flex;
+        width: 365px;
+        height: 30px;
+        font-family: sans-serif;
+        font-style: normal;
+        color: darkgrey;
+        align-items: center;
+        margin: 2.5px;
+    }
+    @mixin buttonstyle {
+        align-items: center;
+        background-color: royalblue;
+        color: white;
+        height: 30px;
+        width: 30%;
+        border: none;
+        border-radius: 1%;
     }
 
     .field input {
-        background-color: black;
+        @include blockstyle;
     }
     .field select {
-        background-color: black;
+        @include blockstyle;
     }
     .box textarea {
-        background-color: black;
+        @include blockstyle;
+        resize: none;
     }
     .box button {
+        @include buttonstyle;
     }
     .container { 
         display: flex;
