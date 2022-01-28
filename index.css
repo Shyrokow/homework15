@@ -11,57 +11,34 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 800px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  text-align: center;
 }
-section form {
+section .box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  max-width: 1200px;
-}
-section form .box {
-  background-color: red;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
+}
+section .field input {
+  background-color: black;
+}
+section .field select {
+  background-color: black;
+}
+section .box textarea {
+  background-color: black;
+}
+section .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-section form .box .Title {
-  font-size: 1.4em;
-  margin: auto 0;
-  background-color: blueviolet;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-}
-section form .box .Title mark {
-  background-color: inherit;
-  color: blue;
-}
-section form .box .field {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 50%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-section .box:first-child {
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
