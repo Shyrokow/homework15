@@ -11,7 +11,7 @@ section {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        width: 365px;
+        width: calc(365px*0.9);
         justify-content: center;
         align-items: center;
         align-content: center;
@@ -80,9 +80,10 @@ section {
                 background-color: green;
                 border: none;
                 border-radius: 20px;
-                height: 30px;
-                width: 365px;
+                height: 40px;
+                width: calc(365px*0.9);
                 color: white;
+                margin: 0 0 20px 0;
             }
         }
     }
@@ -100,7 +101,7 @@ section {
         align-items: center;
         background-color: royalblue;
         color: white;
-        height: 30px;
+        height: 40px;
         width: 90%;
         border: none;
         border-radius: 1%;

@@ -24,7 +24,7 @@ section .box {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 365px;
+  width: calc(365px*0.9);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -101,9 +101,10 @@ section .box + .box + .box + .box .send input {
   background-color: green;
   border: none;
   border-radius: 20px;
-  height: 30px;
-  width: 365px;
+  height: 40px;
+  width: calc(365px*0.9);
   color: white;
+  margin: 0 0 20px 0;
 }
 section .field select,
 section .field input,
@@ -131,7 +132,7 @@ section .box .button {
           align-items: center;
   background-color: royalblue;
   color: white;
-  height: 30px;
+  height: 40px;
   width: 90%;
   border: none;
   border-radius: 1%;
