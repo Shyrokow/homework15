@@ -7,18 +7,23 @@ section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    form {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        min-width: calc(365px*0.9);
+    max-width: 1200px;
     .box {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: column;
-        width: calc(365px*0.9);
+        width: auto;
         justify-content: center;
         align-items: center;
         align-content: center;
         .Title {
             font-size: 34px;
             color: #111a45;
-            width: calc(365px*0.9);
+            min-width: calc(365px*0.9);
             height: 100px;
             text-align: center;
             margin-top: 10px;
@@ -102,9 +107,9 @@ section {
         background-color: royalblue;
         color: white;
         height: 40px;
-        width: 90%;
+        width: calc(365px*0.9);
         border: none;
-        border-radius: 1%;
+        border-radius: 5px;
     }
 
     .field select,
@@ -130,7 +135,8 @@ section {
         border: 3px solid gainsboro;
         border-radius: 5px;
         color: dimgrey;
-        width: calc(365px*0.9);
+        min-width: calc(365px*0.9);
+        max-width: 90%;
         .title {
             margin: 10px 145px 10px 0;
         }
@@ -147,3 +153,4 @@ section {
 
     }
         }
+    }

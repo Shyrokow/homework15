@@ -14,17 +14,25 @@ section {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-section .box {
+section form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-width: calc(365px*0.9);
+  max-width: 1200px;
+}
+section form .box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: calc(365px*0.9);
+  width: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -34,43 +42,43 @@ section .box {
   -ms-flex-line-pack: center;
       align-content: center;
 }
-section .box .Title {
+section form .box .Title {
   font-size: 34px;
   color: #111a45;
-  width: calc(365px*0.9);
+  min-width: calc(365px*0.9);
   height: 100px;
   text-align: center;
   margin-top: 10px;
 }
-section .box .Title mark {
+section form .box .Title mark {
   background-color: inherit;
   color: royalblue;
 }
-section .box + .box + .box + .box {
+section form .box + .box + .box + .box {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
   font-size: 12px;
 }
-section .box + .box + .box + .box p {
+section form .box + .box + .box + .box p {
   margin: 0 0 20px 0;
 }
-section .box + .box + .box + .box .insightsbox {
+section form .box + .box + .box + .box .insightsbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: inherit;
 }
-section .box + .box + .box + .box .insightsbox input {
+section form .box + .box + .box + .box .insightsbox input {
   margin: 0 10px 10px 0;
 }
-section .box + .box + .box + .box .insightsbox .label {
+section form .box + .box + .box + .box .insightsbox .label {
   margin: 0 0 10px 0;
 }
-section .box + .box + .box + .box .insightsbox .checkbox {
+section form .box + .box + .box + .box .insightsbox .checkbox {
   display: none;
 }
-section .box + .box + .box + .box .insightsbox .fake {
+section form .box + .box + .box + .box .insightsbox .fake {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -79,7 +87,7 @@ section .box + .box + .box + .box .insightsbox .fake {
   border-radius: 20px;
   position: relative;
 }
-section .box + .box + .box + .box .insightsbox .fake::before {
+section form .box + .box + .box + .box .insightsbox .fake::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -94,10 +102,10 @@ section .box + .box + .box + .box .insightsbox .fake::before {
   -webkit-transition: 0.45s;
   transition: 0.45s;
 }
-section .box + .box + .box + .box .insightsbox .checkbox:checked + .fake::before {
+section form .box + .box + .box + .box .insightsbox .checkbox:checked + .fake::before {
   opacity: 1;
 }
-section .box + .box + .box + .box .send input {
+section form .box + .box + .box + .box .send input {
   background-color: green;
   border: none;
   border-radius: 20px;
@@ -106,9 +114,9 @@ section .box + .box + .box + .box .send input {
   color: white;
   margin: 0 0 20px 0;
 }
-section .field select,
-section .field input,
-section .box textarea {
+section form .field select,
+section form .field input,
+section form .box textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,21 +131,21 @@ section .box textarea {
   margin: 2.5px;
   resize: none;
 }
-section .box textarea {
+section form .box textarea {
   height: 80px;
 }
-section .box .button {
+section form .box .button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: royalblue;
   color: white;
   height: 40px;
-  width: 90%;
+  width: calc(365px*0.9);
   border: none;
-  border-radius: 1%;
+  border-radius: 5px;
 }
-section .container {
+section form .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,22 +155,23 @@ section .container {
       -ms-flex-pack: center;
           justify-content: center;
 }
-section #b3 {
+section form #b3 {
   margin: 0 auto;
   background-color: lightblue;
   border: 3px solid gainsboro;
   border-radius: 5px;
   color: dimgrey;
-  width: calc(365px*0.9);
+  min-width: calc(365px*0.9);
+  max-width: 90%;
 }
-section #b3 .title {
+section form #b3 .title {
   margin: 10px 145px 10px 0;
 }
-section #b3 .field input,
-section #b3 .field select,
-section #b3 textarea {
+section form #b3 .field input,
+section form #b3 .field select,
+section form #b3 textarea {
   width: calc(365px*0.9*0.9);
 }
-section #b3 .button {
+section form #b3 .button {
   margin: 2.5px 0 10px 0;
 }
