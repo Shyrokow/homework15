@@ -23,8 +23,7 @@ section form {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  min-width: calc(365px*0.9);
-  max-width: 1200px;
+  width: calc(365px*0.9);
 }
 section form .box {
   display: -webkit-box;
@@ -45,7 +44,7 @@ section form .box {
 section form .box .Title {
   font-size: 34px;
   color: #111a45;
-  min-width: calc(365px*0.9);
+  width: calc(365px*0.9);
   height: 100px;
   text-align: center;
   margin-top: 10px;
@@ -99,8 +98,8 @@ section form .box + .box + .box + .box .insightsbox .fake::before {
   height: 16px;
   background: url(switch.png) no-repeat;
   opacity: 0;
-  -webkit-transition: 0.45s;
-  transition: 0.45s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 section form .box + .box + .box + .box .insightsbox .checkbox:checked + .fake::before {
   opacity: 1;
@@ -120,7 +119,7 @@ section form .box textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: calc(365px*0.9);
+  width: calc(365px*0.9*0.9);
   height: 30px;
   font-family: sans-serif;
   font-style: normal;
@@ -141,7 +140,7 @@ section form .box .button {
   background-color: royalblue;
   color: white;
   height: 40px;
-  width: calc(365px*0.9);
+  width: calc(365px*0.9*0.9);
   border: none;
   border-radius: 5px;
 }
@@ -161,8 +160,7 @@ section form #b3 {
   border: 3px solid gainsboro;
   border-radius: 5px;
   color: dimgrey;
-  min-width: calc(365px*0.9);
-  max-width: 90%;
+  width: calc(365px*0.9);
 }
 section form #b3 .title {
   margin: 10px 145px 10px 0;
