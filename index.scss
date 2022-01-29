@@ -15,6 +15,36 @@ section {
         justify-content: center;
         align-items: center;
         align-content: center;
+        .Title {
+            mark {
+                background-color: inherit;
+                color: royalblue;
+            }
+        }
+    }
+    .box+.box+.box+.box{
+        justify-content: start;
+        font-size: 12px;
+        p {
+            margin: 0 0 20px 0;
+        }
+        .insightsbox { 
+            display: flex;
+            width: inherit;
+            input {
+                margin: 0 10px 10px 0;
+            }
+        }
+        .send {
+            input {
+                background-color: green;
+                border: none;
+                border-radius: 20px;
+                height: 30px;
+                width: 365px;
+                color: white;
+            }
+        }
     }
     @mixin blockstyle {
         display: flex;
@@ -36,17 +66,13 @@ section {
         border-radius: 1%;
     }
 
-    .field input {
-        @include blockstyle;
-    }
-    .field select {
-        @include blockstyle;
-    }
+    .field select,
+    .field input,
     .box textarea {
         @include blockstyle;
         resize: none;
     }
-    .box button {
+    .box .button {
         @include buttonstyle;
     }
     .container { 

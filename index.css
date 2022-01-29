@@ -34,34 +34,38 @@ section .box {
   -ms-flex-line-pack: center;
       align-content: center;
 }
-section .field input {
+section .box .Title mark {
+  background-color: inherit;
+  color: royalblue;
+}
+section .box + .box + .box + .box {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  font-size: 12px;
+}
+section .box + .box + .box + .box p {
+  margin: 0 0 20px 0;
+}
+section .box + .box + .box + .box .insightsbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 365px;
-  height: 30px;
-  font-family: sans-serif;
-  font-style: normal;
-  color: darkgrey;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 2.5px;
+  width: inherit;
 }
-section .field select {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 365px;
-  height: 30px;
-  font-family: sans-serif;
-  font-style: normal;
-  color: darkgrey;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 2.5px;
+section .box + .box + .box + .box .insightsbox input {
+  margin: 0 10px 10px 0;
 }
+section .box + .box + .box + .box .send input {
+  background-color: green;
+  border: none;
+  border-radius: 20px;
+  height: 30px;
+  width: 365px;
+  color: white;
+}
+section .field select,
+section .field input,
 section .box textarea {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,7 +81,7 @@ section .box textarea {
   margin: 2.5px;
   resize: none;
 }
-section .box button {
+section .box .button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
