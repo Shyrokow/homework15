@@ -9,12 +9,12 @@
 <body>
     <section>
         <form action="" method="get">
-        <div class="box">
+        <div class="box" id="b1">
             <p class="Title">
                 Submit your <mark>Best</mark> Design
             </p>
         </div>
-        <div class="box">
+        <div class="box" id="b2">
             <div class="field"> <input name="First name*" required placeholder="First name*" type="text"/> </div>
             <div class="field"> <input name="Second name*" required placeholder="Second name*" type="text"/></div>
             <div class="field"> <input name="Email*" required placeholder="Email*" type="email"/> </div>
@@ -23,10 +23,11 @@
             <div class="field"> <select>
                 <option value="" selected disabled>Choose Your Package</option>
                 <option>Пункт 2</option>
-              </select></div>
+              </select>
+            </div>
         </div>
-        <div class="box">
-            <p>
+        <div class="box" id="b3">
+            <p class="title">
                 Add Your Best Design
             </p>
             <div class="field"> <input name="Design Project Name*" required placeholder="Design Project Name*" type="text"/> </div>
@@ -41,11 +42,12 @@
                 </div>
                 <button class="button"><p>Save and Add More Design</p></button>
         </div>
-        <div class="box">
-            <div class="insightsbox"> <label><input name="policy" 
+        <div class="box" id="b4">
+            <div class="insightsbox"> <label class="label"><input name="policy" 
 				required
-				type="checkbox"/></label>
-				<span>I`d like to receive occasional insights from DesignRush</span></div>
+				type="checkbox" class="checkbox"/> <span class="fake"></span>
+                <span class="text">I`d like to receive occasional insights from DesignRush</span></label>
+				</div>
                     <p>By submitting this form, i agree to DesignRush <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
                     <p>This site is protected by reCAPTCHA and the Google <a href="#">Privacy Police</a> and <a href="#">Terms of Service</a> apply</p>
                     <div class="send">

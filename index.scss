@@ -16,6 +16,12 @@ section {
         align-items: center;
         align-content: center;
         .Title {
+            font-size: 34px;
+            color: #111a45;
+            width: calc(365px*0.9);
+            height: 100px;
+            text-align: center;
+            margin-top: 10px;
             mark {
                 background-color: inherit;
                 color: royalblue;
@@ -34,6 +40,40 @@ section {
             input {
                 margin: 0 10px 10px 0;
             }
+            .label {
+                margin: 0 0 10px 0;
+            }
+            .checkbox {
+                display: none;
+            }
+            .fake {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border: 0.5px solid ;
+                border-color: #4158D0;
+                border-radius: 20px;
+                position: relative;
+            }
+            .fake::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: block;
+                width: 16px;
+                height: 16px;
+                background: url(switch.png) no-repeat;
+                opacity: 0;
+                transition: 0.45s;
+            }
+            .checkbox:checked + .fake::before {
+                opacity: 1;
+            }
+            .text {
+
+            }
         }
         .send {
             input {
@@ -48,7 +88,7 @@ section {
     }
     @mixin blockstyle {
         display: flex;
-        width: 365px;
+        width: calc(365px*0.9);
         height: 30px;
         font-family: sans-serif;
         font-style: normal;
@@ -61,7 +101,7 @@ section {
         background-color: royalblue;
         color: white;
         height: 30px;
-        width: 30%;
+        width: 90%;
         border: none;
         border-radius: 1%;
     }
@@ -72,11 +112,37 @@ section {
         @include blockstyle;
         resize: none;
     }
+    .box textarea {
+        height: 80px
+    }
     .box .button {
         @include buttonstyle;
     }
     .container { 
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #b3 {
+        margin: 0 auto;
+        background-color: lightblue;
+        border: 3px solid gainsboro;
+        border-radius: 5px;
+        color: dimgrey;
+        width: calc(365px*0.9);
+        .title {
+            margin: 10px 145px 10px 0;
+        }
+        .field input,
+        .field select,
+        textarea
+         {
+            width: calc(365px*0.9*0.9);
+
+        }
+        .button {
+            margin: 2.5px 0 10px 0;
+        }
+
     }
         }

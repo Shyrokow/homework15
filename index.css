@@ -34,6 +34,14 @@ section .box {
   -ms-flex-line-pack: center;
       align-content: center;
 }
+section .box .Title {
+  font-size: 34px;
+  color: #111a45;
+  width: calc(365px*0.9);
+  height: 100px;
+  text-align: center;
+  margin-top: 10px;
+}
 section .box .Title mark {
   background-color: inherit;
   color: royalblue;
@@ -56,6 +64,39 @@ section .box + .box + .box + .box .insightsbox {
 section .box + .box + .box + .box .insightsbox input {
   margin: 0 10px 10px 0;
 }
+section .box + .box + .box + .box .insightsbox .label {
+  margin: 0 0 10px 0;
+}
+section .box + .box + .box + .box .insightsbox .checkbox {
+  display: none;
+}
+section .box + .box + .box + .box .insightsbox .fake {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 0.5px solid;
+  border-color: #4158D0;
+  border-radius: 20px;
+  position: relative;
+}
+section .box + .box + .box + .box .insightsbox .fake::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url(switch.png) no-repeat;
+  opacity: 0;
+  -webkit-transition: 0.45s;
+  transition: 0.45s;
+}
+section .box + .box + .box + .box .insightsbox .checkbox:checked + .fake::before {
+  opacity: 1;
+}
 section .box + .box + .box + .box .send input {
   background-color: green;
   border: none;
@@ -70,7 +111,7 @@ section .box textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 365px;
+  width: calc(365px*0.9);
   height: 30px;
   font-family: sans-serif;
   font-style: normal;
@@ -81,6 +122,9 @@ section .box textarea {
   margin: 2.5px;
   resize: none;
 }
+section .box textarea {
+  height: 80px;
+}
 section .box .button {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -88,7 +132,7 @@ section .box .button {
   background-color: royalblue;
   color: white;
   height: 30px;
-  width: 30%;
+  width: 90%;
   border: none;
   border-radius: 1%;
 }
@@ -96,6 +140,28 @@ section .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+section #b3 {
+  margin: 0 auto;
+  background-color: lightblue;
+  border: 3px solid gainsboro;
+  border-radius: 5px;
+  color: dimgrey;
+  width: calc(365px*0.9);
+}
+section #b3 .title {
+  margin: 10px 145px 10px 0;
+}
+section #b3 .field input,
+section #b3 .field select,
+section #b3 textarea {
+  width: calc(365px*0.9*0.9);
+}
+section #b3 .button {
+  margin: 2.5px 0 10px 0;
 }
