@@ -23,7 +23,7 @@ section form {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: calc(365px*0.9);
+  min-width: calc(365px*0.9);
 }
 section form .box {
   display: -webkit-box;
@@ -119,7 +119,7 @@ section form .box textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: calc(365px*0.9*0.9);
+  min-width: calc(365px*0.9*0.9);
   height: 30px;
   font-family: sans-serif;
   font-style: normal;
@@ -140,7 +140,7 @@ section form .box .button {
   background-color: royalblue;
   color: white;
   height: 40px;
-  width: calc(365px*0.9*0.9);
+  min-width: calc(365px*0.9*0.9);
   border: none;
   border-radius: 5px;
 }
@@ -150,25 +150,90 @@ section form .container {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 60%;
+          flex: 1 1 60%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 section form #b3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0 auto;
   background-color: lightblue;
   border: 3px solid gainsboro;
   border-radius: 5px;
   color: dimgrey;
+  min-width: calc(365px*0.9);
+  max-width: 50%;
+}
+section form #b3 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 365px;
+          flex: 1 1 365px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+section form #b3 #cb32 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-top: 3px solid gainsboro;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+section form #b3 #cb32 .field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-width: calc(365px*0.9*0.9);
+  margin: 0 20px 0 0;
+}
+section form #b3 #cb32 .field input {
   width: calc(365px*0.9);
 }
 section form #b3 .title {
-  margin: 10px 145px 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
 }
 section form #b3 .field input,
 section form #b3 .field select,
 section form #b3 textarea {
-  width: calc(365px*0.9*0.9);
+  min-width: calc(365px*0.9*0.9);
+}
+section form #b3 #bcb322 {
+  width: 85vh;
 }
 section form #b3 .button {
   margin: 2.5px 0 10px 0;
