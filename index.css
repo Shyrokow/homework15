@@ -11,8 +11,6 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 section form {
   display: -webkit-box;
@@ -23,7 +21,21 @@ section form {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  min-width: calc(365px*0.9);
+}
+@media screen and (min-width: 365px) and (max-width: 650px) {
+  section form {
+    width: 365px;
+  }
+}
+@media screen and (min-width: 650px) and (max-width: 1025px) {
+  section form {
+    width: 650px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  section form {
+    width: 1025px;
+  }
 }
 section form .box {
   display: -webkit-box;
@@ -31,7 +43,6 @@ section form .box {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -40,11 +51,26 @@ section form .box {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  margin: 10px 0 10px 0;
+}
+@media screen and (min-width: 365px) and (max-width: 650px) {
+  section form .box {
+    width: calc(365px*0.9);
+  }
+}
+@media screen and (min-width: 650px) and (max-width: 1025px) {
+  section form .box {
+    width: calc(650px*0.9);
+  }
+}
+@media screen and (min-width: 1025px) {
+  section form .box {
+    width: calc(1025px*0.9);
+  }
 }
 section form .box .Title {
   font-size: 34px;
   color: #111a45;
-  width: calc(365px*0.9);
   height: 100px;
   text-align: center;
   margin-top: 10px;
@@ -53,31 +79,296 @@ section form .box .Title mark {
   background-color: inherit;
   color: royalblue;
 }
-section form .box + .box + .box + .box {
+section form .box .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+section form .box .field {
+  padding: 0 0 10px 10px;
+}
+section form .box .field select,
+section form .box .field input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  font-family: sans-serif;
+  font-style: normal;
+  color: darkgrey;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2.5px;
+  resize: none;
+  width: 100%;
+}
+@media screen and (min-width: 365px) and (max-width: 650px) {
+  section form .box .field select,
+section form .box .field input {
+    height: 30px;
+  }
+}
+@media screen and (min-width: 650px) and (max-width: 1025px) {
+  section form .box .field select,
+section form .box .field input {
+    height: 35px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  section form .box .field select,
+section form .box .field input {
+    height: 40px;
+  }
+}
+section form .box textarea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  font-family: sans-serif;
+  font-style: normal;
+  color: darkgrey;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2.5px;
+  resize: none;
+}
+@media screen and (min-width: 365px) and (max-width: 650px) {
+  section form .box textarea {
+    height: 30px;
+  }
+}
+@media screen and (min-width: 650px) and (max-width: 1025px) {
+  section form .box textarea {
+    height: 35px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  section form .box textarea {
+    height: 40px;
+  }
+}
+@media screen and (min-width: 365px) and (max-width: 650px) {
+  section form .box textarea {
+    height: 80px;
+    width: 94%;
+  }
+}
+@media screen and (min-width: 650px) and (max-width: 1025px) {
+  section form .box textarea {
+    height: 50%;
+    width: 40%;
+    margin: 0 0 0 20px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  section form .box textarea {
+    height: 60%;
+    width: 40%;
+    margin: 0 0 0 20px;
+  }
+}
+section form .box .button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: royalblue;
+  color: white;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+}
+section .box:nth-child(2) .container {
+  width: 90%;
+}
+@media screen and (min-width: 365px) and (max-width: 650px) {
+  section .box:nth-child(2) .container .field {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 650px) and (max-width: 1025px) {
+  section .box:nth-child(2) .container .field {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  section .box:nth-child(2) .container .field {
+    width: 40%;
+  }
+}
+
+.box:nth-child(3) {
+  background-color: lightblue;
+  border: 3px solid gainsboro;
+  border-radius: 5px;
+  color: dimgrey;
+  height: 350px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.box:nth-child(3) p {
+  width: 100%;
+}
+.box:nth-child(3) .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 365px) and (max-width: 650px) {
+  .box:nth-child(3) .container {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 650px) and (max-width: 1025px) {
+  .box:nth-child(3) .container {
+    width: 265px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .box:nth-child(3) .container {
+    width: 425px;
+  }
+}
+.box:nth-child(3) .container .field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 365px) and (max-width: 650px) {
+  .box:nth-child(3) .container .field input,
+.box:nth-child(3) .container .field select {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 650px) and (max-width: 1025px) {
+  .box:nth-child(3) .container .field input,
+.box:nth-child(3) .container .field select {
+    width: 265px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .box:nth-child(3) .container .field input,
+.box:nth-child(3) .container .field select {
+    width: 425px;
+  }
+}
+.box:nth-child(3) .container:nth-child(4) {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 365px) and (max-width: 650px) {
+  .box:nth-child(3) .container:nth-child(4) {
+    width: 365px;
+  }
+}
+@media screen and (min-width: 650px) and (max-width: 1025px) {
+  .box:nth-child(3) .container:nth-child(4) {
+    width: 650px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .box:nth-child(3) .container:nth-child(4) {
+    width: 1025px;
+  }
+}
+.box:nth-child(3) .container:nth-child(4) .field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (min-width: 365px) and (max-width: 650px) {
+  .box:nth-child(3) .container:nth-child(4) .field {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media screen and (min-width: 650px) and (max-width: 1025px) {
+  .box:nth-child(3) .container:nth-child(4) .field {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .box:nth-child(3) .container:nth-child(4) .field {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+@media screen and (min-width: 650px) and (max-width: 1025px) {
+  .box:nth-child(3) .container:nth-child(4) .field input {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .box:nth-child(3) .container:nth-child(4) .field input {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 365px) and (max-width: 650px) {
+  .box:nth-child(3) .button:nth-child(5) {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 650px) and (max-width: 1025px) {
+  .box:nth-child(3) .button:nth-child(5) {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .box:nth-child(3) .button:nth-child(5) {
+    width: 30%;
+  }
+}
+
+.box:nth-child(4) {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
   font-size: 12px;
 }
-section form .box + .box + .box + .box p {
+.box:nth-child(4) p {
   margin: 0 0 20px 0;
 }
-section form .box + .box + .box + .box .insightsbox {
+.box:nth-child(4) .insightsbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: inherit;
 }
-section form .box + .box + .box + .box .insightsbox input {
+.box:nth-child(4) .insightsbox input {
   margin: 0 10px 10px 0;
 }
-section form .box + .box + .box + .box .insightsbox .label {
+.box:nth-child(4) .insightsbox .label {
   margin: 0 0 10px 0;
 }
-section form .box + .box + .box + .box .insightsbox .checkbox {
+.box:nth-child(4) .insightsbox .checkbox {
   display: none;
 }
-section form .box + .box + .box + .box .insightsbox .fake {
+.box:nth-child(4) .insightsbox .fake {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -86,7 +377,7 @@ section form .box + .box + .box + .box .insightsbox .fake {
   border-radius: 20px;
   position: relative;
 }
-section form .box + .box + .box + .box .insightsbox .fake::before {
+.box:nth-child(4) .insightsbox .fake::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -101,10 +392,10 @@ section form .box + .box + .box + .box .insightsbox .fake::before {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-section form .box + .box + .box + .box .insightsbox .checkbox:checked + .fake::before {
+.box:nth-child(4) .insightsbox .checkbox:checked + .fake::before {
   opacity: 1;
 }
-section form .box + .box + .box + .box .send input {
+.box:nth-child(4) .send input {
   background-color: green;
   border: none;
   border-radius: 20px;
@@ -113,128 +404,30 @@ section form .box + .box + .box + .box .send input {
   color: white;
   margin: 0 0 20px 0;
 }
-section form .field select,
-section form .field input,
-section form .box textarea {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-width: calc(365px*0.9*0.9);
-  height: 30px;
-  font-family: sans-serif;
-  font-style: normal;
-  color: darkgrey;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 2.5px;
-  resize: none;
+@media screen and (min-width: 365px) and (max-width: 650px) {
+  .box:nth-child(4) .containerinb {
+    width: 100%;
+  }
 }
-section form .box textarea {
-  height: 80px;
+@media screen and (min-width: 650px) and (max-width: 1025px) {
+  .box:nth-child(4) .containerinb {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    width: 100%;
+  }
 }
-section form .box .button {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: royalblue;
-  color: white;
-  height: 40px;
-  min-width: calc(365px*0.9*0.9);
-  border: none;
-  border-radius: 5px;
-}
-section form .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 60%;
-          flex: 1 1 60%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-section form #b3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 0 auto;
-  background-color: lightblue;
-  border: 3px solid gainsboro;
-  border-radius: 5px;
-  color: dimgrey;
-  min-width: calc(365px*0.9);
-  max-width: 50%;
-}
-section form #b3 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 365px;
-          flex: 1 1 365px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-section form #b3 #cb32 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-top: 3px solid gainsboro;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-section form #b3 #cb32 .field {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  min-width: calc(365px*0.9*0.9);
-  margin: 0 20px 0 0;
-}
-section form #b3 #cb32 .field input {
-  width: calc(365px*0.9);
-}
-section form #b3 .title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-section form #b3 .field input,
-section form #b3 .field select,
-section form #b3 textarea {
-  min-width: calc(365px*0.9*0.9);
-}
-section form #b3 #bcb322 {
-  width: 85vh;
-}
-section form #b3 .button {
-  margin: 2.5px 0 10px 0;
+@media screen and (min-width: 1025px) {
+  .box:nth-child(4) .containerinb {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    width: 100%;
+  }
 }

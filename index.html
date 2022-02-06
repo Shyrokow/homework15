@@ -1,68 +1,89 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset='utf-8'>
     <title>Homework15</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
 </head>
+
 <body>
     <section>
         <form action="" method="get">
-        <div class="box" id="b1">
-            <p class="Title">
-                Submit your <mark>Best</mark> Design
-            </p>
-        </div>
-        <div class="box" id="b2">
-            <div class="container">
-            <div class="field"> <input name="First name*" required placeholder="First name*" type="text"/> </div>
-            <div class="field"> <input name="Second name*" required placeholder="Second name*" type="text"/></div>
+            <div class="box" id="b1">
+                <p class="Title">
+                    Submit your <mark>Best</mark> Design
+                </p>
             </div>
-            <div class="container">
-            <div class="field"> <input name="Email*" required placeholder="Email*" type="email"/> </div>
-            <div class="field"> <input name="Company name*" required placeholder="Company name*" type="text"/></div>
+            <div class="box" id="b2">
+                <div class="container" id="cb31">
+                    <div class="field"> <input name="First name*" required placeholder="First name*" type="text" />
+                    </div>
+                    <div class="field"> <input name="Second name*" required placeholder="Second name*" type="text" />
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="field"> <input name="Email*" required placeholder="Email*" type="email" /> </div>
+                    <div class="field"> <input name="Company name*" required placeholder="Company name*" type="text" />
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="field"> <input name="Company Website*" required placeholder="Company Website*"
+                            type="text" /></div>
+                    <div class="field"> <select>
+                            <option value="" selected disabled>Choose Your Package</option>
+                            <option>Пункт 2</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-            <div class="container">
-            <div class="field"> <input name="Company Website*" required placeholder="Company Website*" type="text"/></div>
-            <div class="field"> <select>
-                <option value="" selected disabled>Choose Your Package</option>
-                <option>Пункт 2</option>
-              </select>
+            <div class="box" id="b3">
+                <p class="title">
+                    Add Your Best Design
+                </p>
+                <div class="container" id="cb32">
+                    <div class="field"> <input name="Design Project Name*" required placeholder="Design Project Name*"
+                            type="text" /> </div>
+                    <div class="field"> <select>
+                            <option value="" selected disabled>Best Design Category*</option>
+                            <option>Пункт 2</option>
+                        </select></div>
+                </div>
+                <textarea name="Description" placeholder="Project Short Description"></textarea>
+                <div class="container" id="cb33">
+                    <div class="field"> <input name="Add Your Best URL" placeholder="Add Your Best URL"
+                            type="url" /><button class="button" id="bcb321">
+                            <p>Add URL</p>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="button" id="bcb322">
+                    <p>Save and Add More Design</p>
+                </button>
             </div>
-            </div>
-        </div>
-        <div class="box" id="b3">
-            <p class="title">
-                Add Your Best Design
-            </p>
-            <div class="container" id="cb31">
-            <div class="field"> <input name="Design Project Name*" required placeholder="Design Project Name*" type="text"/> </div>
-            <div class="field"> <select>
-                <option value="" selected disabled>Best Design Category*</option>
-                <option>Пункт 2</option>
-              </select></div>
-            </div>
-              <textarea name="Description" placeholder="Project Short Description"></textarea>
-              <div class="container" id="cb32">
-                <div class="field"> <input name="Add Your Best URL"  placeholder="Add Your Best URL" type="url"/><button class="button" id="bcb321"><p>Add URL</p></button>
-                </div></div>
-                
-                <button class="button" id="bcb322"><p>Save and Add More Design</p></button>
-        </div>
-        <div class="box" id="b4">
-            <div class="insightsbox"> <label class="label"><input name="policy" 
-				required
-				type="checkbox" class="checkbox"/> <span class="fake"></span>
-                <span class="text">I`d like to receive occasional insights from DesignRush</span></label>
-				</div>
-                    <p>By submitting this form, i agree to DesignRush <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
-                    <p>This site is protected by reCAPTCHA and the Google <a href="#">Privacy Police</a> and <a href="#">Terms of Service</a> apply</p>
+            <div class="box" id="b4">
+                <div class="containerinb">
+                    <div class="container" id="cb33">
+                        <div class="insightsbox"> <label class="label"><input name="policy" required type="checkbox"
+                                    class="checkbox" /> <span class="fake"></span>
+                                <span class="text">I`d like to receive occasional insights from
+                                    DesignRush</span></label>
+                        </div>
+                        <p>By submitting this form, i agree to DesignRush <a href="#">Terms of Use</a> and <a
+                                href="#">Privacy
+                                Policy</a></p>
+                        <p>This site is protected by reCAPTCHA and the Google <a href="#">Privacy Police</a> and <a
+                                href="#">Terms of Service</a> apply</p>
+                    </div>
                     <div class="send">
                         <input name="send" value="SUBMIT &#9658" type="submit">
-                        </div>
-        </div>
-    </form>
-    </section> 
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
 </body>
+
 </html>

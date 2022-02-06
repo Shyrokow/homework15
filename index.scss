@@ -1,3 +1,32 @@
+$small: 365px;
+$medium: 650px;
+$big: 1025px;
+@mixin blockstyle {
+    display: flex;
+    height: 30px;
+    font-family: sans-serif;
+    font-style: normal;
+    color: darkgrey;
+    align-items: center;
+    margin: 2.5px;
+    @media screen and (min-width: $small) and (max-width: $medium) {
+        height: 30px;
+    }
+    @media screen and (min-width: $medium) and (max-width: $big) {
+        height: 35px;
+    }
+    @media screen and (min-width: $big){
+        height: 40px;
+    }
+}
+@mixin buttonstyle {
+    align-items: center;
+    background-color: royalblue;
+    color: white;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
 * {
     padding: 0%;
     margin: 0%;
@@ -6,23 +35,39 @@
 section {
     display: flex;
     justify-content: center;
+
+form {
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    form {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        min-width: calc(365px*0.9);
+    @media screen and (min-width: $small) and (max-width: $medium) {
+        width: $small;
+    }
+    @media screen and (min-width: $medium) and (max-width: $big) {
+        width: $medium;
+    }
+    @media screen and (min-width: $big){
+        width: $big;
+    }
     .box {
         display: flex;
         flex-wrap: wrap;
-        width: auto;
         justify-content: center;
         align-items: center;
         align-content: center;
+        margin: 10px 0 10px 0;
+        @media screen and (min-width: $small) and (max-width: $medium) {
+            width: calc(365px*0.9);
+        }
+        @media screen and (min-width: $medium) and (max-width: $big) {
+            width: calc(650px*0.9);
+        }
+        @media screen and (min-width: $big){
+            width: calc(1025px*0.9);
+        }
         .Title {
             font-size: 34px;
             color: #111a45;
-            width: calc(365px*0.9);
             height: 100px;
             text-align: center;
             margin-top: 10px;
@@ -31,8 +76,150 @@ section {
                 color: royalblue;
             }
         }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .field {
+            padding: 0 0 10px 10px;
+            select,
+             input
+        {
+            @include blockstyle;
+            resize: none;
+            width: 100%;
+        }
+        }
+        textarea {
+            @include blockstyle;
+            resize: none;
+            @media screen and (min-width: $small) and (max-width: $medium) {
+                height: 80px;
+                width: 94%;
+            }
+            @media screen and (min-width: $medium) and (max-width: $big) {
+                height: 50%;
+                width: 40%;
+                margin: 0 0 0 20px;
+            }
+            @media screen and (min-width: $big){
+                height: 60%;
+                width: 40%;
+                margin: 0 0 0 20px;
+            }
+        }
+        .button {
+            @include buttonstyle;
+        }
     }
-    .box+.box+.box+.box{
+    }
+    .box:nth-child(2){
+        .container {
+            width: 90%;
+            .field {
+
+                    @media screen and (min-width: $small) and (max-width: $medium) {
+                        width: 90%;
+                    }
+                    @media screen and (min-width: $medium) and (max-width: $big) {
+                        width: 40%;
+                    }
+                    @media screen and (min-width: $big){
+                        width: 40%;
+                    }
+                }
+            }
+        }
+    }
+    .box:nth-child(3){
+        background-color: lightblue;
+        border: 3px solid gainsboro;
+        border-radius: 5px;
+        color: dimgrey;
+        height: 350px;
+        justify-content: center;
+        p {
+            width: 100%;
+        }
+        .container {
+            display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        @media screen and (min-width: $small) and (max-width: $medium) {
+           width: 100%;
+        }
+        @media screen and (min-width: $medium) and (max-width: $big) {
+            width: 265px;
+        }
+        @media screen and (min-width: $big){
+            width: 425px;
+        }
+        .field{
+            display: flex;
+            justify-content: center;
+            input,
+            select {
+                @media screen and (min-width: $small) and (max-width: $medium) {
+                    width: 100%;
+                 }
+                 @media screen and (min-width: $medium) and (max-width: $big) {
+                    width: 265px;
+                 }
+                 @media screen and (min-width: $big){
+                     width: 425px;
+                 }
+            }
+        }
+        }
+        .container:nth-child(4){
+            justify-content: center;
+            @media screen and (min-width: $small) and (max-width: $medium) {
+                width: $small;
+             }
+             @media screen and (min-width: $medium) and (max-width: $big) {
+                width: $medium;
+             }
+             @media screen and (min-width: $big){
+                width: $big;
+             }
+            .field{
+                display: flex;
+                @media screen and (min-width: $small) and (max-width: $medium) {
+                    flex-direction: column;
+                 }
+                 @media screen and (min-width: $medium) and (max-width: $big) {
+                    flex-direction: row;
+                 }
+                 @media screen and (min-width: $big){
+                    flex-direction: row;
+                 }
+            input {
+                 @media screen and (min-width: $medium) and (max-width: $big) {
+                    width: 80%;
+                 }
+                 @media screen and (min-width: $big){
+                    width: 90%;
+                 }
+            }
+        }
+
+            
+        }
+        .button:nth-child(5) {
+            @media screen and (min-width: $small) and (max-width: $medium) {
+                width: 90%;
+             }
+             @media screen and (min-width: $medium) and (max-width: $big) {
+                width: 30%;
+             }
+             @media screen and (min-width: $big){
+                width: 30%;
+             }
+        }
+
+    }
+    .box:nth-child(4) {
         justify-content: start;
         font-size: 12px;
         p {
@@ -87,100 +274,19 @@ section {
                 margin: 0 0 20px 0;
             }
         }
-    }
-    @mixin blockstyle {
-        display: flex;
-        min-width:  calc(365px*0.9*0.9);
-        height: 30px;
-        font-family: sans-serif;
-        font-style: normal;
-        color: darkgrey;
-        align-items: center;
-        margin: 2.5px;
-    }
-    @mixin buttonstyle {
-        align-items: center;
-        background-color: royalblue;
-        color: white;
-        height: 40px;
-        min-width: calc(365px*0.9*0.9);
-        border: none;
-        border-radius: 5px;
-    }
-
-    .field select,
-    .field input,
-    .box textarea {
-        @include blockstyle;
-        resize: none;
-    }
-    .box textarea {
-        height: 80px
-    }
-    .box .button {
-        @include buttonstyle;
-    }
-    .container { 
-        display: flex;
-        flex-wrap: wrap;
-        flex: 1 1 60%;
-        justify-content: center;
-    }
-    #b3 {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 auto;
-        background-color: lightblue;
-        border: 3px solid gainsboro;
-        border-radius: 5px;
-        color: dimgrey;
-        min-width: calc(365px*0.9);
-        max-width: 50%;
-        .container {
-            display: flex;
-        flex-wrap: wrap;
-             flex: 1 1 365px;
-        justify-content: center;
-        flex-direction: column;
-        }
-        #cb32 {
-            display: flex;
-            justify-content: center;
-            border-top: 3px solid gainsboro;
-            flex-direction: row;
-            .field {
-                display: flex;
-                align-items: center;
-                align-content: center;
-                justify-content: center;
-                flex-wrap: wrap;
-                min-width: calc(365px*0.9*0.9);
-                margin: 0 20px 0 0;
-                input {
-                    width: calc(365px*0.9);
-                }
-            }
-        }
-        .title {
-            display: flex;
+    .containerinb {
+        @media screen and (min-width: $small) and (max-width: $medium) {
             width: 100%;
-        }
-        .field input,
-        .field select,
-        textarea
-         {
-            min-width: calc(365px*0.9*0.9);
-
-        }
-
-        #bcb322 {
-            width: 85vh;
-        }
-        .button {
-            margin: 2.5px 0 10px 0;
-        }
-
+         }
+         @media screen and (min-width: $medium) and (max-width: $big) {
+            display: flex;
+            justify-content: left;
+            width: 100%;
+         }
+         @media screen and (min-width: $big){
+            display: flex;
+            justify-content: left;
+            width: 100%;
+         }
     }
-        }
     }
-    
